@@ -82,7 +82,7 @@
     "Performance": "性能",
     "Uptime": "可用性",
     "Note:": "注意：",
-    "Tokens": "Tokens",
+    "Tokens": "令牌",
     "Personal":"个人中心",
     "Monthly Tokens": "月度Tokens",
     "Weekly Trend": "周趋势",
@@ -90,7 +90,11 @@
     "by": "来自于",
     "Status": "状态",
     "Works With OR": "与 OR 合作",
-    "Data": "数据"
+    "Data": "数据",
+    "tokens": "令牌",
+    "context": "上下文",
+    "/M input": "/M 输入",
+    "/M output": "/M 输出"
   },
   "docs": {
     "Documentation": "文档",
@@ -264,6 +268,66 @@
       "pattern": "^\\d+[kmb]\\+\\s*apps\\s*using\\s*OpenRouter\\s*with\\s*[\\d.]+[kmb]\\+\\s*users\\s*globally$",
       "flags": "i",
       "replacement": "使用 OpenRouter 的应用，全球用户"
+    },
+    {
+      "pattern": "^Jan\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年1月$1日"
+    },
+    {
+      "pattern": "^Feb\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年2月$1日"
+    },
+    {
+      "pattern": "^Mar\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年3月$1日"
+    },
+    {
+      "pattern": "^Apr\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年4月$1日"
+    },
+    {
+      "pattern": "^May\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年5月$1日"
+    },
+    {
+      "pattern": "^Jun\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年6月$1日"
+    },
+    {
+      "pattern": "^Jul\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年7月$1日"
+    },
+    {
+      "pattern": "^Aug\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年8月$1日"
+    },
+    {
+      "pattern": "^Sep\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年9月$1日"
+    },
+    {
+      "pattern": "^Oct\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年10月$1日"
+    },
+    {
+      "pattern": "^Nov\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年11月$1日"
+    },
+    {
+      "pattern": "^Dec\\s+(\\d{1,2}),\\s+(\\d{4})$",
+      "flags": "",
+      "replacement": "$2年12月$1日"
     }
   ]
 }
