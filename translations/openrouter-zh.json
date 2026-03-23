@@ -1,0 +1,269 @@
+{
+  "navigation": {
+    "Search": "搜索",
+    "Ask AI": "问 AI",
+    "Models": "模型",
+    "Model": "模型",
+    "Chat": "聊天",
+    "Rankings": "排行榜",
+    "Apps": "应用",
+    "Enterprise": "企业版",
+    "Pricing": "价格",
+    "Docs": "文档",
+    "Recent Announcements": "最新公告",
+    "Featured Agents": "精选智能体",
+    "Featured Models": "精选模型",
+    "View all": "查看全部",
+    "Learn more": "了解更多",
+    "Skip to content": "跳到正文",
+    "Light": "浅色",
+    "Dark": "深色",
+    "Yes": "是",
+    "No": "否",
+    "Signup": "注册",
+    "Sign up": "注册",
+    "Buy credits": "购买额度",
+    "Get API Key": "获取 API Key",
+    "Get your API key": "获取你的 API Key",
+    "Product": "产品",
+    "Company": "公司",
+    "Developer": "开发者",
+    "Connect": "联系我们",
+    "Providers": "服务商",
+    "Redeem": "兑换",
+    "About": "关于",
+    "Announcements": "公告",
+    "Careers": "招聘",
+    "Terms of Service": "服务条款",
+    "Support": "支持",
+    "Activity": "活动",
+    "Logs": "日志",
+    "Settings": "设置",
+    "Sign Out": "退出登录",
+    "Input Modalities": "输入模式",
+    "Text": "文本",
+    "Image": "图片",
+    "File": "文件",
+    "Audio": "音频",
+    "Video": "视频",
+    "Output Modalities": "输出模式",
+    "Embeddings": "嵌入",
+    "Context length": "上下文长度",
+    "Prompt pricing": "提示词价格",
+    "Series": "系列",
+    "Categories": "分类",
+    "Supported Parameters": "支持的参数",
+    "Distillable": "可蒸馏的",
+    "Zero Data Retention": "零数据保留",
+    "Model Authors": "模型作者",
+    "Credits": "额度",
+    "Labs": "实验室",
+    "Newest": "最新",
+    "Most Popular": "最受欢迎",
+    "Top Weekly": "每周热门",
+    "Pricing: Low to High": "价格：从低到高",
+    "Pricing: High to Low": "价格：从高到低",
+    "Context: High to Low": "上下文长度：从高到低",
+    "Throughput: High to Low": "吞吐量：从高到低",
+    "Latency: Low to High": "延迟：从低到高",
+    "Academia": "学术",
+    "Finance": "金融",
+    "Health": "健康",
+    "Legal": "法律",
+    "Marketing": "营销",
+    " categories": "分类",
+    "Programming": "编程",
+    "Roleplay": "角色扮演",
+    "Science": "科学",
+    "Technology": "技术",
+    "Translation": "翻译",
+    "Trivia": " 琐事",
+    "Compare": "对比",
+    "Performance": "性能",
+    "Uptime": "可用性",
+    "Note:": "注意：",
+    "Tokens": "Tokens",
+    "Personal":"个人中心",
+    "Monthly Tokens": "月度Tokens",
+    "Weekly Trend": "周趋势",
+    "Browse all": "浏览全部",
+    "by": "来自于",
+    "Status": "状态",
+    "Works With OR": "与 OR 合作",
+    "Data": "数据"
+  },
+  "docs": {
+    "Documentation": "文档",
+    "API Reference": "API 参考",
+    "SDK Reference": "SDK 参考",
+    "Overview": "概览",
+    "Quickstart": "快速开始",
+    "Principles": "原则",
+    "Authentication": "鉴权",
+    "FAQ": "常见问题",
+    "Report Feedback": "反馈问题",
+    "Models & Routing": "模型与路由",
+    "Model Fallbacks": "模型回退",
+    "Provider Selection": "服务商选择",
+    "Model Variants": "模型变体",
+    "Routers": "路由器",
+    "Features": "功能",
+    "Presets": "预设",
+    "Tool Calling": "工具调用",
+    "Plugins": "插件",
+    "Structured Outputs": "结构化输出",
+    "Message Transforms": "消息转换",
+    "Zero Completion Insurance": "零补全保障",
+    "App Attribution": "应用署名",
+    "Guardrails": "护栏策略",
+    "Broadcast": "广播",
+    "Privacy": "隐私",
+    "Best Practices": "最佳实践",
+    "Guides": "指南",
+    "On this page": "本页内容",
+    "Copy page": "复制页面链接",
+    "Explore Models": "探索模型",
+    "Using the OpenRouter SDK (Beta)": "使用 OpenRouter SDK（Beta）",
+    "Using the OpenRouter API directly": "直接使用 OpenRouter API",
+    "Using the OpenAI SDK": "使用 OpenAI SDK",
+    "Using third-party SDKs": "使用第三方 SDK",
+    "Request Builder": "请求构建器",
+    "Was this page helpful?": "这个页面对你有帮助吗？",
+    "Model & App Rankings": "模型与应用排行榜"
+  },
+  "marketing": {
+    "Community": "社区",
+    "Global Users": "全球用户",
+    "Active Providers": "活跃服务商",
+    "Active Models": "活跃模型",
+    "State of AI": "AI 现状",
+    "The Unified Interface For LLMs": "统一的 LLM 接口",
+    "Better prices, better uptime, no subscriptions.": "更低价格，更高可用性，无需订阅。",
+    "Fully OpenAI compatible": "完全兼容 OpenAI",
+    "One API for Any Model": "一个 API 接入任意模型",
+    "Higher Availability": "更高可用性",
+    "Price and Performance": "价格与性能",
+    "Custom Data Policies": "自定义数据策略",
+    "Create an account to get started. You can set up an org for your team later.": "创建账号即可开始，之后你还可以为团队配置组织。",
+    "Credits can be used with any model or provider.": "额度可用于任意模型或服务商。",
+    "Create an API key and start making requests.": "创建一个 API Key 后即可开始发起请求。",
+    "Tokens processed in the last 7 days": "最近 7 天处理的 Tokens",
+    "Access all major models through a single, unified interface. OpenAI SDK works out of the box.": "通过单一、统一的接口访问所有主要模型。OpenAI SDK 开箱即用。",
+    "Reliable AI models via our distributed infrastructure. Fall back to other providers when one goes down.": "通过我们的分布式基础设施提供可靠的 AI 模型。当一个服务商宕机时，会自动切换到其他服务商。",
+    "Keep costs in check without sacrificing speed. OpenRouter runs at the edge for minimal latency between your users and their inference.": "保持成本控制，无需牺牲速度。OpenRouter 在边缘运行，提供最小延迟。",
+    "Protect your organization with fine grained data policies. Ensure prompts only go to the models and providers you trust.": "通过自定义数据策略保护你的组织，确保提示词仅发送到你信任的模型和服务商。",
+    "Discover AI models across our collection, from all major labs and providers.": "探索我们的模型集合，从所有主要实验室和服务商获取模型。",
+    "Explore token usage across models, labs, and public applications.": "探索模型、实验室和公共应用程序的 Token 使用情况。",
+    "All prompts and completions for this model are logged by the provider and may be used to improve the model.": "此模型的所有提示词和补全都由服务商记录，可能用于改进模型。",
+    "The easiest way to go from idea to app": "从想法到应用的最简单方式",
+    "AI agent for builders": "面向开发者的 AI 智能体",
+    "Everything you need for agentic development": "智能开发所需的一切"
+  },
+  "regexRules": [
+    {
+      "pattern": "^Better $",
+      "flags": "i",
+      "replacement": "更好"
+    },
+    {
+      "pattern": "^, better$",
+      "flags": "i",
+      "replacement": " 更高"
+    },
+    {
+      "pattern": "^(\\d+(?:[\\.,]\\d+)?[TGBMK]?\\+?)\\s*context$",
+      "flags": "i",
+      "replacement": " 上下文"
+    },
+    {
+      "pattern": "^, no subscriptions\\.$",
+      "flags": "i",
+      "replacement": "，无需订阅。"
+    },
+    {
+      "pattern": "^(\\d+(?:[\\.,]\\d+)?[TGBMK]?\\+?)\\s*Monthly Tokens$",
+      "flags": "i",
+      "replacement": "$1 月度 Tokens"
+    },
+    {
+      "pattern": "^active models on$",
+      "flags": "i",
+      "replacement": "个活跃模型，"
+    },
+    {
+      "pattern": "^prices$",
+      "flags": "i",
+      "replacement": "价格"
+    },
+    {
+      "pattern": "^uptime$",
+      "flags": "i",
+      "replacement": "可用性"
+    },
+    {
+      "pattern": "^Hiring$",
+      "flags": "i",
+      "replacement": ""
+    },
+    {
+      "pattern": "^providers$",
+      "flags": "i",
+      "replacement": "服务商"
+    },
+    {
+      "pattern": "^New$",
+      "flags": "i",
+      "replacement": "新"
+    },
+    {
+      "pattern": "^(\\d+(?:[\\.,]\\d+)?[TGBMK]?\\+?)\\+\\s*Active Providers$",
+      "flags": "i",
+      "replacement": "$1+ 活跃服务商"
+    },
+    {
+      "pattern": "^(\\d+(?:[\\.,]\\d+)?[TGBMK]?\\+?)\\+\\s*Models$",
+      "flags": "i",
+      "replacement": "$1+ 个模型"
+    },
+    {
+      "pattern": "^(\\d+(?:[\\.,]\\d+)?[TGBMK]?\\+?)\\+\\s*Global Users$",
+      "flags": "i",
+      "replacement": "$1+ 全球用户"
+    },
+    {
+      "pattern": "^(\\d+(?:[\\.,]\\d+)?[TGBMK]?\\+?)\\s*Monthly Tokens$",
+      "flags": "i",
+      "replacement": "$1 月度 Tokens"
+    },
+    {
+      "pattern": "^(?:\\d+(?:[\\.,]\\d+)?[TGBMK]?\\+?\\s*)?Weekly Trend\\s*([+-]?\\d+(?:[\\.,]\\d+)?%)$",
+      "flags": "i",
+      "replacement": "周趋势 $1"
+    },
+    {
+      "pattern": "^View models$",
+      "flags": "i",
+      "replacement": "查看模型"
+    },
+    {
+      "pattern": "^View rankings$",
+      "flags": "i",
+      "replacement": "查看排行榜"
+    },
+    {
+      "pattern": "^View docs$",
+      "flags": "i",
+      "replacement": "查看文档"
+    },
+    {
+      "pattern": "^models$",
+      "flags": "i",
+      "replacement": "个模型"
+    },
+    {
+      "pattern": "^\\d+[kmb]\\+\\s*apps\\s*using\\s*OpenRouter\\s*with\\s*[\\d.]+[kmb]\\+\\s*users\\s*globally$",
+      "flags": "i",
+      "replacement": "使用 OpenRouter 的应用，全球用户"
+    }
+  ]
+}
