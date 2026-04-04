@@ -11,6 +11,14 @@ This is a Tampermonkey user script that translates the OpenRouter.ai website int
 - `openrouter-zh.user.js` — Main userscript (import into Tampermonkey)
 - `translations/openrouter-zh.json` — Translation dictionary loaded via `@resource`
 
+## Installation
+
+1. Install [Tampermonkey](https://www.tampermonkey.net/)
+2. Create a new script, paste the userscript content
+3. Verify the `@resource` line points to the correct local JSON path
+4. Open `https://openrouter.ai/`
+5. In Tampermonkey settings: `Settings -> Config Mode: Advanced -> Script Access to Local Files: Enable (@require and @resource)`
+
 ## Translation Dictionary Format
 
 Translations are organized into categories (navigation, docs, marketing, static) which are merged at runtime into a single lookup dictionary:
@@ -40,7 +48,7 @@ The `regexRules` array handles dynamic/pattern-based translations that can't use
 - To update the `@resource` path, edit the line in the script header:
   `// @resource openrouterZhTranslations file:///path/to/translations/openrouter-zh.json`
 - After modifying `translations/openrouter-zh.json`, refresh the page or use the Tampermonkey menu command "重新加载本地词库并翻译当前页"
-- The built-in fallback dictionary in `DEFAULT_TRANSLATION_PAYLOAD` (lines 59-188) mirrors the local JSON structure
+- The built-in fallback dictionary `DEFAULT_TRANSLATION_PAYLOAD` (in older versions) mirrored the local JSON structure. Current versions attempt to load `@resource` and throw if it fails — ensure the file path resolves on your machine
 
 ## Communication Guidelines
 
