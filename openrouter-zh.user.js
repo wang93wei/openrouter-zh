@@ -11,8 +11,8 @@
 // @grant        GM_setValue
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
-// @grant        GM_getResourceText
-// @resource     openrouterZhTranslations file:///Users/alanwang/git/openrouter-zh/translations/openrouter-zh.json
+// @grant        GM_xmlhttpRequest
+// @connect      raw.githubusercontent.com
 // ==/UserScript==
 
 (function () {
@@ -21,6 +21,12 @@
   const STORAGE_KEYS = {
     enabled: "openrouter-zh-enabled",
   };
+
+  const TRANSLATION_PATHS = [
+    "file:///C:/Users/wang9/Desktop/git/openrouter-zh/translations/openrouter-zh.json",
+    "file:///Users/alanwang/git/openrouter-zh/translations/openrouter-zh.json",
+    "https://raw.githubusercontent.com/wang93wei/openrouter-zh/main/translations/openrouter-zh.json",
+  ];
 
   const CONFIG = {
     mutationDebounceMs: 120,
@@ -80,12 +86,17 @@
     menus: [],
   };
 
-  initializeTranslationBundle();
-  registerMenuCommands();
-
-  if (state.enabled) {
-    start();
-  }
+  initializeTranslationBundle()
+    .then(() => {
+      registerMenuCommands();
+      if (state.enabled) {
+        start();
+      }
+    })
+    .catch((err) => {
+      console.error("[openrouter-zh] Initialization failed:", err);
+      registerMenuCommands();
+    });
 
   function start() {
     if (state.started) {
@@ -100,17 +111,36 @@
     scheduleFlush();
   }
 
-  function initializeTranslationBundle() {
+  function loadTranslationFile() {
+    return TRANSLATION_PATHS.reduce(
+      (prev, url) =>
+        prev.catch(() =>
+          new Promise((resolve, reject) => {
+            if (typeof GM_xmlhttpRequest !== "function") {
+              reject(new Error("GM_xmlhttpRequest not available"));
+              return;
+            }
+            GM_xmlhttpRequest({
+              method: "GET",
+              url,
+              onload: (r) => {
+                if (r.status === 200 && r.responseText && r.responseText.trim()) {
+                  resolve(r.responseText);
+                } else {
+                  reject(new Error(`Failed to load ${url}: status ${r.status}`));
+                }
+              },
+              onerror: (e) => reject(new Error(`Network error loading ${url}`)),
+            });
+          })
+        ),
+      Promise.reject(new Error("No paths configured"))
+    );
+  }
+
+  async function initializeTranslationBundle() {
     try {
-      const resourceText =
-        typeof GM_getResourceText === "function"
-          ? GM_getResourceText("openrouterZhTranslations")
-          : "";
-
-      if (!resourceText || !resourceText.trim()) {
-        throw new Error("Local translation resource is empty");
-      }
-
+      const resourceText = await loadTranslationFile();
       const payload = JSON.parse(resourceText);
       state.translationBundle = buildTranslationBundle(payload);
     } catch (error) {
@@ -119,18 +149,24 @@
     }
   }
 
-  function reloadTranslationsAndReapply() {
+  async function reloadTranslationsAndReapply() {
     const shouldRestart = state.enabled || state.started;
     if (state.started) {
       restoreAll();
     }
 
-    initializeTranslationBundle();
-    unregisterMenuCommands();
-    registerMenuCommands();
+    try {
+      await initializeTranslationBundle();
+      unregisterMenuCommands();
+      registerMenuCommands();
 
-    if (shouldRestart) {
-      start();
+      if (shouldRestart) {
+        start();
+      }
+    } catch (err) {
+      console.error("[openrouter-zh] Reload failed:", err);
+      unregisterMenuCommands();
+      registerMenuCommands();
     }
   }
 
@@ -583,8 +619,9 @@
           registerMenuCommands();
 
           if (state.enabled) {
-            initializeTranslationBundle();
-            start();
+            initializeTranslationBundle()
+              .then(() => start())
+              .catch((err) => console.error("[openrouter-zh] Load failed:", err));
           } else {
             restoreAll();
           }

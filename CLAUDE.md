@@ -4,20 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Tampermonkey user script that translates the OpenRouter.ai website interface to Chinese. It uses `@resource` to load a local JSON translation file and falls back to a built-in dictionary if the local file is unavailable.
+This is a Tampermonkey user script that translates the OpenRouter.ai website interface to Chinese. It uses `GM_xmlhttpRequest` to load a local JSON translation file, trying multiple file paths to support different development machines.
 
 ## File Structure
 
 - `openrouter-zh.user.js` — Main userscript (import into Tampermonkey)
-- `translations/openrouter-zh.json` — Translation dictionary loaded via `@resource`
+- `translations/openrouter-zh.json` — Translation dictionary loaded via `GM_xmlhttpRequest`
 
 ## Installation
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/)
 2. Create a new script, paste the userscript content
-3. Verify the `@resource` line points to the correct local JSON path
+3. Add your local JSON path to the `LOCAL_TRANSLATION_PATHS` array in the script
 4. Open `https://openrouter.ai/`
-5. In Tampermonkey settings: `Settings -> Config Mode: Advanced -> Script Access to Local Files: Enable (@require and @resource)`
+5. In Tampermonkey settings: `Settings -> Config Mode: Advanced -> Script Access to Local Files: Enable`
 
 ## Translation Dictionary Format
 
@@ -45,10 +45,9 @@ The `regexRules` array handles dynamic/pattern-based translations that can't use
 ## Development Notes
 
 - No build system — edit the userscript directly and reload in Tampermonkey
-- To update the `@resource` path, edit the line in the script header:
-  `// @resource openrouterZhTranslations file:///path/to/translations/openrouter-zh.json`
+- To add a new machine path, add it to the `LOCAL_TRANSLATION_PATHS` array in the script body
 - After modifying `translations/openrouter-zh.json`, refresh the page or use the Tampermonkey menu command "重新加载本地词库并翻译当前页"
-- The built-in fallback dictionary `DEFAULT_TRANSLATION_PAYLOAD` (in older versions) mirrored the local JSON structure. Current versions attempt to load `@resource` and throw if it fails — ensure the file path resolves on your machine
+- The script tries each path in `LOCAL_TRANSLATION_PATHS` via `GM_xmlhttpRequest` until one succeeds — ensure at least one path resolves on your machine
 
 ## Communication Guidelines
 
