@@ -151,7 +151,6 @@
     "SDK":"SDK",
     "blog post":"博客文章",
     "Weighted Avg Input Price":"加权平均输入价格",
-    "Note: The model collects prompt and completion data that can be used to improve the model.":"注意：此模型会收集提示词和补全数据，可能用于改进模型。",
     "Usage of this model is subject to":"使用此模型需遵守",
     "Tongyi Qianwen LICENSE AGREEMENT":"通义千问许可协议",
     "Better ": "更好",
@@ -167,7 +166,9 @@
     "View docs": "查看文档",
     "models": "个模型",
     "Provider": "服务商",
-    "Timestamp": "时间戳"
+    "Timestamp": "时间戳",
+    "/M output tokens": "/M 输出 tokens",
+    "/M input tokens": "/M 输入 tokens"
   },
   "docs": {
     "Documentation": "文档",
@@ -214,7 +215,8 @@
     "Compare OpenRouter token share by model author": "对比 OpenRouter 模型作者的 Token 分享",
     "Top models on OpenRouter by Artificial Analysis Intelligence Index ": "OpenRouter 上最受欢迎的模型",
     "to the best poviders that are able to handle your prompt size and parameters, with fallbacks to maximize performance": "选择最合适的服务商，以处理你的提示大小和参数，同时最大化性能。",
-    "Compare different providers across OpenRouter": "对比 OpenRouter 上不同服务商的性能"
+    "Compare different providers across OpenRouter": "对比 OpenRouter 上不同服务商的性能",
+    "Note: The model collects prompt and completion data that can be used to improve the model.": "注意：此模型会收集提示词和补全数据，可能用于改进模型。"
   },
   "marketing": {
     "Community": "社区",

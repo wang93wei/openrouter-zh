@@ -126,17 +126,26 @@
               responseType: "arraybuffer",
               onload: (r) => {
                 try {
+                  if (r.status < 200 || r.status >= 300) {
+                    reject(new Error(`HTTP ${r.status} loading ${url}`));
+                    return;
+                  }
                   const text = new TextDecoder("utf-8").decode(new Uint8Array(r.response));
                   if (text && text.trim()) {
                     resolve(text);
                   } else {
-                    reject(new Error(`Failed to load ${url}: status ${r.status}`));
+                    reject(new Error(`Empty response from ${url}: status ${r.status}`));
                   }
                 } catch (e) {
-                  reject(new Error(`Decode error loading ${url}`));
+                  reject(new Error(`Decode error loading ${url}: ${e.message}`));
                 }
               },
-              onerror: (e) => reject(new Error(`Network error loading ${url}`)),
+              onerror: (e) =>
+                reject(
+                  new Error(
+                    `Network error loading ${url}: status ${e.status ?? "unknown"}`
+                  )
+                ),
             });
           })
         ),
