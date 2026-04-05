@@ -123,11 +123,17 @@
             GM_xmlhttpRequest({
               method: "GET",
               url,
+              responseType: "arraybuffer",
               onload: (r) => {
-                if (r.status === 200 && r.responseText && r.responseText.trim()) {
-                  resolve(r.responseText);
-                } else {
-                  reject(new Error(`Failed to load ${url}: status ${r.status}`));
+                try {
+                  const text = new TextDecoder("utf-8").decode(new Uint8Array(r.response));
+                  if (text && text.trim()) {
+                    resolve(text);
+                  } else {
+                    reject(new Error(`Failed to load ${url}: status ${r.status}`));
+                  }
+                } catch (e) {
+                  reject(new Error(`Decode error loading ${url}`));
                 }
               },
               onerror: (e) => reject(new Error(`Network error loading ${url}`)),
