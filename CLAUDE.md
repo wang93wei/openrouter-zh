@@ -57,10 +57,3 @@ Before reporting back, verify your own work whenever possible. Don't assume code
 
 Define finishing criteria for yourself before starting: what does "done" look like for this task? Use that as your checklist before coming back. If something fails or looks off, fix it and re-test. Don't just flag it and hand it back. The goal is finished, working results — not a first draft that needs spot-checking. Only come back when things work, or when you've genuinely hit a wall that requires input.
 
-## gstack
-
-Use the `/browse` skill from gstack for all web browsing. Never use `mcp__claude-in-chrome__*` tools.
-
-Available skills: /office-hours, /plan-ceo-review, /plan-eng-review, /plan-design-review, /design-consultation, /review, /ship, /land-and-deploy, /canary, /benchmark, /browse, /qa, /qa-only, /design-review, /setup-browser-cookies, /setup-deploy, /retro, /investigate, /document-release, /codex, /cso, /careful, /freeze, /guard, /unfreeze, /gstack-upgrade
-
-If gstack skills aren't working, run `cd .claude/skills/gstack && ./setup` to build the binary and register skills.
