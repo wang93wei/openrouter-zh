@@ -168,7 +168,13 @@
     "Provider": "服务商",
     "Timestamp": "时间戳",
     "/M output tokens": "/M 输出 tokens",
-    "/M input tokens": "/M 输入 tokens"
+    "/M input tokens": "/M 输入 tokens",
+    "Weighted Average": "加权平均",
+    "Weighted Avg Output Price": "加权平均输出价格",
+    "AI Model Comparison": "AI 模型对比",
+    "More…": "查看更多…",
+    "Less": "收回",
+    "FREE": "免费"
   },
   "docs": {
     "Documentation": "文档",
@@ -209,6 +215,12 @@
     "Was this page helpful?": "这个页面对你有帮助吗？",
     "Model & App Rankings": "模型与应用排行榜",
     "Start a new message...": "开始新消息...",
+    "Top public apps this month": "本月最受欢迎的应用",
+    "The AI that actually does things": "真正能做事的 AI",
+    "AI coding agent for VS Code": "VS Code 编码智能体",
+    "The AI for problem solvers": "能解决问题的AI",
+    "Autonomous coding agent right in your IDE": "在 IDE 中的自主编码智能体",
+    "Total usage per day on OpenRouter": "OpenRouter 模型每天使用量",
     "An image-generating model is required.": "需要一个图片生成模型。",
     "Weekly usage of models across OpenRouter": "OpenRouter 模型每周使用量",
     "Compare the most popular models on OpenRouter": "对比 OpenRouter 上最受欢迎的模型",
@@ -216,7 +228,13 @@
     "Top models on OpenRouter by Artificial Analysis Intelligence Index ": "OpenRouter 上最受欢迎的模型",
     "to the best poviders that are able to handle your prompt size and parameters, with fallbacks to maximize performance": "选择最合适的服务商，以处理你的提示大小和参数，同时最大化性能。",
     "Compare different providers across OpenRouter": "对比 OpenRouter 上不同服务商的性能",
-    "Note: The model collects prompt and completion data that can be used to improve the model.": "注意：此模型会收集提示词和补全数据，可能用于改进模型。"
+    "Note: The model collects prompt and completion data that can be used to improve the model.": "注意：此模型会收集提示词和补全数据，可能用于改进模型。",
+    "Prompt tokens measure input size. Reasoning tokens show internal thinking before a response. Completion tokens reflect total output length.": "提示词 tokens 测量输入大小。推理 tokens 显示内部思考。补全 tokens 反映总输出长度。",
+    "OpenRouter normalizes requests and responses across providers for you.": "OpenRouter 会为你的请求和响应进行统一化，无需你手动处理。",
+    "Actual cost per million tokens across providers over the past hour": "最近 1 小时内不同服务商的平均成本",
+    "Test this model directly in the playground.": "直接在演练场测试此模型。",
+    "Compare AI models by key metrics like price, latency, throughput, context length, and other features.": "对比 AI 模型的关键指标，如价格、延迟、吞吐量、上下文长度和其他特征。",
+    "An autonomous agent that grows with you": "一个会随你而增长的自主智能体"
   },
   "marketing": {
     "Community": "社区",
@@ -250,5 +268,6 @@
     "messages from your conversation each request.": "条消息",
     "Based on real usage data from millions of users accessing models through OpenRouter.": "基于数百万用户通过 OpenRouter 访问模型的真实使用数据。"
   },
-  "regexRules": []
+  "regexRules": [
+  ]
 }
